@@ -26,8 +26,7 @@ async def scrape(ctx, url):
 			filename = os.path.basename(img_url)
 			if not "logo" in filename and not "Logo" in filename and not "icon" in filename and not "Icon" in filename and not "svg" in filename:
 				await ctx.send(file=discord.File(filename))
-				print(f"sent {filename}")
 		except Exception as e:
-			print(f"Error sending image: {e}")
+			await ctx.send(f"Error sending image: {e}")
    
 client.run("token")
