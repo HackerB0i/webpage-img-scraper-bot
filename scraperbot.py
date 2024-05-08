@@ -4,7 +4,7 @@ from discord.ext import commands
 import requests
 from bs4 import BeautifulSoup
 
-intents = discord.Intents.all()
+intents = discord.Intents.all() # enable this in the developer portal
 client = commands.Bot(command_prefix = 's!', intents=intents)
 
 @client.event
