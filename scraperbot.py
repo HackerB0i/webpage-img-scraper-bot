@@ -23,7 +23,6 @@ async def scrape(ctx, url):
 	for img in img_tags:
 		try:
 			img_url = img['src']
-			
 			filename = os.path.basename(img_url)
 			if not "logo" in filename and not "Logo" in filename and not "icon" in filename and not "Icon" in filename and not "svg" in filename:
 				await ctx.send(file=discord.File(filename))
