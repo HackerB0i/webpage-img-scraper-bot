@@ -16,7 +16,6 @@ client.remove_command('help')
  
 @client.command()
 async def scrape(ctx, url):
-	print("jdklfjkdsa")
 	response = requests.get(url)
 	soup = BeautifulSoup(response.text, 'html.parser')
 	img_tags = soup.find_all('img')
